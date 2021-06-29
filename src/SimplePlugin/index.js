@@ -5,7 +5,7 @@ import SimpleHTMLRender from "./SimpleHTMLRender";
 import SimpleLayer from "./SimpleLayer";
 import { SimpleLayerInspector } from "./SimpleLayerInspector";
 
-export default function (editor, dep) {
+export default function (editor) {
 
     // register item layer 
     editor.registerItem(SIMPLE_TYPE, SimpleLayer)

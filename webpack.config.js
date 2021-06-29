@@ -1,9 +1,20 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
     main: path.resolve(__dirname, './src/index.js'),
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist/'),
+    library: {
+      name: 'SimplePlugin',
+      type: 'umd',
+      export: ['default']
+    },
+  },
+  externals: {
+    "@easylogic/editor": "@easylogic/editor",
   },
   module: {
     rules: [
@@ -16,10 +27,8 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'webpack Boilerplate',
-      template: path.resolve(__dirname, './src/template.html'), // template file
-      filename: 'index.html', // output file
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ['*.LICENSE.txt'],
     }),
   ],
 }
