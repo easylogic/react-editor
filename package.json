@@ -1,6 +1,6 @@
 {
   "name": "@easylogic/editor-plugin-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "simple plugin template for easylogic studio",
   "main": "./dist/index.js",
   "module": "./src/index.js",
