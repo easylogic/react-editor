@@ -14,8 +14,15 @@
     "url": "git+https://github.com/easylogic/editor-plugin-template.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "easylogic",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name" : "easylogic",
+      "email" : "cyberuls@gmail.com",
+      "url" : "https://github.com/easylogic"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/easylogic/editor-plugin-template/issues"
   },
