@@ -10,6 +10,9 @@
 * add Layer Model 
 
 # Local Dev 
+
+Please install `react` and `react-dom`
+
 ```
 npm install
 npm install @easylogic/editor react react-dom
