@@ -1,4 +1,4 @@
-# Plugin Template for EasyLogic Studio 
+# React Plugin Template for EasyLogic Studio 
 
 ## Features 
 
@@ -12,7 +12,7 @@
 # Local Dev 
 ```
 npm install
-npm install @easylogic/editor
+npm install @easylogic/editor react react-dom
 npm run dev 
 ```
 
