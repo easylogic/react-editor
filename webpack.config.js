@@ -15,12 +15,17 @@ module.exports = {
   },
   externals: {
     "@easylogic/editor": "@easylogic/editor",
+    "react": "react",
+    "react-dom": "react-dom",
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },  
   module: {
     rules: [
       // JavaScript
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
       },

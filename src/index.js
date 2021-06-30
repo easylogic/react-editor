@@ -1,3 +1,3 @@
-import SimplePlugin from './SimplePlugin';
+import ReactComponentPlugin from './ReactComponentPlugin';
 
-export default SimplePlugin
+export default ReactComponentPlugin
