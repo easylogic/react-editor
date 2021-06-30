@@ -2,7 +2,7 @@
   "name": "@easylogic/editor-plugin-react",
   "version": "0.0.3",
   "description": "simple react plugin template for easylogic studio",
-  "main": "./dist/index.js",
+  "main": "./dist/main.js",
   "module": "./src/index.js",
   "scripts": {
     "build": "webpack --mode production",
