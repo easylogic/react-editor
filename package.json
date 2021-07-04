@@ -6,9 +6,7 @@
   "scripts": {
     "build": "webpack --mode production --progress",
     "dev": "webpack serve --mode development --config ./webpack.dev.config.js --port 8082",
-    "release": "release-it *",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "release": "release-it *"
   },
   "repository": {
     "type": "git",
