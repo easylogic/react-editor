@@ -1,6 +1,6 @@
 {
   "name": "@easylogic/react-editor",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "React Design Editor (with easylogic studio)",
   "main": "./dist/main.js",
   "scripts": {
