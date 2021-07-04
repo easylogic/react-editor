@@ -1,5 +1,6 @@
-import { HTMLLayerRender } from '@easylogic/editor';
+import {Dom, Item, HTMLLayerRender} from '@easylogic/editor';
 import { REACT_COMPONENT_TYPE } from './constants';
+
 
 import createMyComponent from "./createMyComponent";
 
@@ -7,7 +8,7 @@ import createMyComponent from "./createMyComponent";
   
 export default class ReactComponentHTMLRender extends HTMLLayerRender {
 
-  update (item, currentElement) {
+  update (item: Item, currentElement: Dom) {
 
     let $reactComponentArea = currentElement.$(".react-component-area");
     if ($reactComponentArea) {
@@ -17,7 +18,7 @@ export default class ReactComponentHTMLRender extends HTMLLayerRender {
     super.update(item, currentElement);
   }    
 
-  render (item) {
+  render (item: Item) {
     var {id} = item;
 
     return /*html*/`

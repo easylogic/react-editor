@@ -1,4 +1,4 @@
-import { EditorInstance, MenuItem  } from "@easylogic/editor";
+import { EditorElement, EditorInstance, ElementValue, MenuItem  } from "@easylogic/editor";
 import { REACT_COMPONENT_TYPE } from "./constants";
 import ReactComponentHTMLRender from "./ReactComponentHTMLRender";
 import { ReactComponentLayer } from "./ReactComponentLayer";
@@ -8,16 +8,15 @@ import { ReactComponentLayer } from "./ReactComponentLayer";
 /**
  * 
  * initialize ReactComponent Plugin 
- * 
- * @param {EditorInstance} editor
+ *
  */
-export default function (editor) {
+export default function (editor: EditorInstance) {
 
     // register item layer 
     editor.registerComponent(REACT_COMPONENT_TYPE, ReactComponentLayer);
 
     // register inspector editor 
-    editor.registerInspector(REACT_COMPONENT_TYPE, function (item) {
+    editor.registerInspector(REACT_COMPONENT_TYPE, function (item: any) {
         return [
             {
                 key: `value`,
@@ -49,12 +48,12 @@ export default function (editor) {
             return true;
         }
         
-        clickButton(e) {
+        clickButton() {
             this.emit('addLayerView', REACT_COMPONENT_TYPE);
         }
     }
 
     editor.registerMenuItem('sidebar', {
-        AddReactComponent
-    })
+            AddReactComponent
+        } as unknown as ElementValue<EditorElement>)
 }

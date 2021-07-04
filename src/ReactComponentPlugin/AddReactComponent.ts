@@ -15,8 +15,8 @@ export default class AddReactComponent extends MenuItem {
     return true; 
   }  
 
-  clickButton(e) {
-    this.emit('addLayerView', REACT_COMPONENT_TYPE);
+  clickButton() {
+    this.emit('addLayerView', REACT_COMPONENT_TYPE); 
   }
 
 }

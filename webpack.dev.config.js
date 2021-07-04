@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, './src/dev-index.js'),
+    main: path.resolve(__dirname, './src/dev-index.tsx'),
   },
   mode: 'development',
   devServer: {
@@ -16,16 +16,15 @@ module.exports = {
     port: 8080,
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
     rules: [
-      // JavaScript
       {
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
+        use: ['babel-loader', 'ts-loader'],
         exclude: /node_modules/,
-        use: ['babel-loader'],
-      },
+      },      
       // CSS, PostCSS, and Sass
       {
         test: /\.(scss|css)$/,
@@ -39,7 +38,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'webpack Boilerplate',
+      title: 'React Editor',
       template: path.resolve(__dirname, './src/index.html'), // template file
       filename: 'index.html', // output file
     }),

@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
-function createMyComponent (props = {}) {
+function createMyComponent (props: any = {}) {
     return <div className={'my-first-react-component'}>
       <div onClick={() => alert(props.value)}>Sample Value: {props.value}</div> 
       <div style={{backgroundColor: 'blue', border: '5px solid white'}}>
@@ -10,6 +10,6 @@ function createMyComponent (props = {}) {
     </div>
 }
 
-export default function render (props, container) {
+export default function render (props: any, container: HTMLElement) {
     return ReactDOM.render(createMyComponent(props), container)
 }
