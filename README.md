@@ -10,7 +10,9 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import EditorView from "@easylogic/react-editor";
 
-ReactDOM.render(<EditorView />, document.getElementById('app'));
+ReactDOM.render(<EditorView plugins={[
+    MyPlugin
+]}/>, document.getElementById('app'));
 
 ```
 
