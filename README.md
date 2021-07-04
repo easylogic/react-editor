@@ -1,4 +1,19 @@
-# React Plugin Template for EasyLogic Studio 
+# React Wrapper for EasyLogic Studio 
+
+
+# How to use 
+
+refer to dev-index.tsx 
+
+```js
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import EditorView from "@easylogic/react-editor";
+
+ReactDOM.render(<EditorView />, document.getElementById('app'));
+
+```
+
 
 ## Features 
 
@@ -15,7 +30,7 @@ Please install `react` and `react-dom`
 
 ```
 npm install
-npm install @easylogic/editor react react-dom
+npm install @easylogic/react-editor react react-dom
 npm run dev 
 ```
 
